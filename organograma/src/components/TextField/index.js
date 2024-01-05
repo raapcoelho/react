@@ -1,10 +1,11 @@
 import './TextField.css'
 // Aero Function
-const TextField = () =>{
+// o props é passado pelo react de forma implicita, que são as propriedades que o componente recebeu
+const TextField = (props) =>{
     return (
         <div className="text-field">
-            <label>Nome</label>
-            <input placeholder='Digite o seu nome'/>
+            <label>{props.label}</label>
+            <input placeholder={props.placeholder}/>
         </div>
     )
 }

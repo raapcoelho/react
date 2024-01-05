@@ -6,8 +6,8 @@ function App() {
     <div className="App">
       <Banner />
       <TextField label="Nome" placeholder="Digite o seu nome" />
-      <TextField label="Cargo" placeholder="Digite o seu nome" />
-      <TextField label="Imagem" placeholder="Digite o seu nome" />
+      <TextField label="Cargo" placeholder="Digite o seu cargo" />
+      <TextField label="Imagem" placeholder="Informe o endereço da imagem" />
     </div>
   );
 }
