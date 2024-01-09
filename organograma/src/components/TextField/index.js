@@ -2,17 +2,16 @@ import './TextField.css'
 // Aero Function
 // o props é passado pelo react de forma implicita, que são as propriedades que o componente recebeu
 
-let value = ''
-const keyPress = (event) =>{
-    value = event.target.value
-    console.log(value);
-}
-
 const TextField = (props) =>{
+
+    const keyPress = (event) =>{
+        props.change(event.target.value)
+    }
+
     return (
         <div className="text-field">
             <label>{props.label}</label>
-            <input value={value} onChange={keyPress} required={props.required} placeholder={props.placeholder}/>
+            <input value={props.value} onChange={keyPress} required={props.required} placeholder={props.placeholder}/>
         </div>
     )
 }
