@@ -4,7 +4,7 @@ import ComboBox from '../ComboBox'
 import TextField from '../TextField'
 import './Form.css'
 
-const Form = () => {
+const Form = (props) => {
 
     const teams = [
         'Generic',
@@ -20,7 +20,12 @@ const Form = () => {
 
     const save = (event) => {
         event.preventDefault()
-        console.log('Form enviado => ', name, type, image, team)
+        props.saveTicket({
+            name: name, 
+            type: type, 
+            image: image, 
+            team: team
+        })
     }
 
     return (
