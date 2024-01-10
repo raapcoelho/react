@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form saveTicket={ticket => addTicket(ticket)}/>   
+      <Form teams={teams.map(team => team.name)} saveTicket={ticket => addTicket(ticket)}/>   
 
       {teams.map(team => <Team key={team.name} name={team.name} primaryColor={team.primaryColor} secondaryColor={team.secondaryColor}/>)}
 

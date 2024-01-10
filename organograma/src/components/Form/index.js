@@ -6,13 +6,6 @@ import './Form.css'
 
 const Form = (props) => {
 
-    const teams = [
-        'Generic',
-        'Documentation',
-        'OKR',
-        'Gamefication'
-    ]
-
     const [name, setName] = useState('')
     const [type, setType] = useState('')
     const [image, setImage] = useState('')
@@ -51,7 +44,7 @@ const Form = (props) => {
                 <ComboBox 
                     required={true} 
                     label={"Tipoo de Ingresso"} 
-                    itens={teams}
+                    itens={props.teams}
                     value={team}
                     change={value => setTeams(value)} />
                 <Button>
