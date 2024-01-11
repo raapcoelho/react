@@ -54,7 +54,12 @@ function App() {
       <Banner />
       <Form teams={teams.map(team => team.name)} saveTicket={ticket => addTicket(ticket)}/>   
 
-      {teams.map(team => <Team key={team.name} name={team.name} primaryColor={team.primaryColor} secondaryColor={team.secondaryColor}/>)}
+      {teams.map(team => <Team 
+        key={team.name} 
+        name={team.name} 
+        primaryColor={team.primaryColor} 
+        secondaryColor={team.secondaryColor}
+        participants={tickets.filter(participant => participant.team === team.name)}/>)}
 
     </div>
   );
