@@ -1,10 +1,10 @@
 import './Participant.css'
 
-const Participant = ({name, type, image}) =>{
+const Participant = ({name, type, image, primaryColor}) =>{
 
     return (
         <div className='participant'>
-            <div className='header'>
+            <div className='header' style={{backgroundColor: primaryColor}}>
                 <img src={image} alt={name} />
             </div>
             <div className='footer'>
