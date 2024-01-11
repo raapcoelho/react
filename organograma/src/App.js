@@ -46,6 +46,7 @@ function App() {
   const [tickets, setTickets] = useState([])
 
   const addTicket = (ticket) => {
+    // debugger
     setTickets([...tickets, ticket])
   }
 
